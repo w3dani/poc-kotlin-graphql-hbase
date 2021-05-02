@@ -1,0 +1,9 @@
+type Query {
+    listAll: [Metrics]
+}
+
+type Metrics {
+    id: ID!
+    name: String
+    comment: String
+}

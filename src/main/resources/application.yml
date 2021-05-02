@@ -1,0 +1,7 @@
+server:
+  port: 8081
+sprint:
+  data:
+    mongodb:
+      database: kotlin-sample
+      port: 27017

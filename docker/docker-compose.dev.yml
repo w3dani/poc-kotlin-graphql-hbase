@@ -1,0 +1,5 @@
+version: '3.5'
+services:
+  hbase:
+    image: bde2020/hbase-standalone
+    container_name: hbase_dev
