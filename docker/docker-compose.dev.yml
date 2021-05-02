@@ -3,3 +3,9 @@ services:
   hbase:
     image: bde2020/hbase-standalone
     container_name: hbase_dev
+    ports:
+      - '16000:16000'
+      - '16010:16010'
+      - '16020:16020'
+      - '16030:16030'
+      - '2181:2181'

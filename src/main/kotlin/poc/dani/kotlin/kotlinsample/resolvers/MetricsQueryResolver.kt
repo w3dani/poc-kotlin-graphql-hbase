@@ -16,4 +16,8 @@ class MetricsQueryResolver : GraphQLQueryResolver {
         return metricsRepository.listAll()
     }
 
+    fun findById(metricId: String): Metrics {
+        return metricsRepository.findById(metricId)
+    }
+
 }

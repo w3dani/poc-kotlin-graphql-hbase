@@ -18,9 +18,8 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.data:spring-data-hadoop:2.5.0.RELEASE")
-    implementation("org.apache.hbase:hbase-client:1.1.2"){
+    implementation("org.apache.hbase:hbase-client:2.4.2"){
         exclude("org.slf4j", "slf4j-log4j12")
-        exclude("log4j", "log4j")
     }
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")

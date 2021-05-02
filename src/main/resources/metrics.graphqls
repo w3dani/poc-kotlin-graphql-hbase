@@ -1,5 +1,6 @@
 type Query {
     listAll: [Metrics]
+    findById(metricId: String!): Metrics
 }
 
 type Metrics {
