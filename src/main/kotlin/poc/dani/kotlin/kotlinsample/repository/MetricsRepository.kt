@@ -10,15 +10,16 @@ import poc.dani.kotlin.kotlinsample.repository.mappers.MetricsMapper
 @Repository
 class MetricsRepository {
 
-    @Autowired
-    private lateinit var hbaseTemplate: HbaseTemplate
+//    @Autowired
+//    private lateinit var hbaseTemplate: HbaseTemplate
 
     fun listAll(): List<Metrics> {
         return listOf()
     }
 
     fun findById(metricId: String): Metrics {
-        return hbaseTemplate.get("metrics", metricId, MetricsMapper())
+        return Metrics("a", "b")
+//        return hbaseTemplate.get("metrics", metricId, MetricsMapper())
     }
 
 
