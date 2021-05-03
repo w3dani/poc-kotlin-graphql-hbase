@@ -10,16 +10,18 @@ import poc.dani.kotlin.kotlinsample.repository.mappers.MetricsMapper
 @Repository
 class MetricsRepository {
 
-//    @Autowired
-//    private lateinit var hbaseTemplate: HbaseTemplate
+    @Autowired
+    private lateinit var hbaseTemplate: HbaseTemplate
+
+    val tableName = "metrics"
+    val performanceFamily = "performance"
 
     fun listAll(): List<Metrics> {
-        return listOf()
+        return hbaseTemplate.find(tableName, performanceFamily, MetricsMapper());
     }
 
     fun findById(metricId: String): Metrics {
-        return Metrics("a", "b")
-//        return hbaseTemplate.get("metrics", metricId, MetricsMapper())
+        return hbaseTemplate.get(tableName, metricId, MetricsMapper());
     }
 
 
